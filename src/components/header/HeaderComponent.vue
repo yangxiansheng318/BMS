@@ -1,7 +1,6 @@
 <template>
   <div class="container">
-    <el-container>
-      <el-header height="70px">
+    <el-header height="70px">
         <div class="header-left">
           <div class="header-icon-left">
             <span class="el-icon-s-fold"></span>
@@ -16,7 +15,6 @@
           <span class="header-right-name">用户名</span>
         </div>
       </el-header>
-    </el-container>
   </div>
 </template>
 
