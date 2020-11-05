@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import LoginComponent from '@/components/login/Login-Component'
-import RegisterComponent from '@/components/login/Register-Component'
+import LoginComponent from '@/components/login/LoginComponent'
+import RegisterComponent from '@/components/login/RegisterComponent'
 export default {
   name: 'Login',
   data () {

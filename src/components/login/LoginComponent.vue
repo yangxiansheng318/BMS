@@ -37,12 +37,17 @@ export default {
         return
       }
 
-      const flag = true
+      const flag = false
       // 假设该用户不存在，触发事件给父组件，让父组件更改登录子组件为注册子组件
       if (flag) {
         this.$emit('changeCon', false)
         this.form = {}
       }
+
+      // 假设用户登录成功 跳转到首页
+      this.$router.push({
+        path: '/home'
+      })
     }
   }
 }
