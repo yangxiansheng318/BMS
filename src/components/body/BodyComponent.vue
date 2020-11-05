@@ -8,6 +8,9 @@
           <slot name="body-aside-component"></slot>
         </div>
         <div class="body-main">
+          <div class="body-main-search">
+            <slot name="body-main-search-component"></slot>
+          </div>
         </div>
       </div>
   </div>
@@ -39,6 +42,10 @@ export default {
       margin .4rem .4rem 0 .4rem
       width 100%
       height 17.2rem
-      box-shadow 1px 1px 5px #666
       border-radius .2rem
+      .body-main-search
+        width 100%
+        height 1.4rem
+        border-radius .2rem
+        box-shadow 1px 1px 5px #666
 </style>

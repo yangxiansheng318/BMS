@@ -29,12 +29,13 @@ export default {
   margin .2rem .2rem .2rem 0
 .el-header
   box-shadow 1px 1px 5px #666
-  background-color: #fff;
+  background-color: #242f42;
   line-height: 1.4rem;
   .header-right
     margin-right .4rem
     display flex
     flex-direction row
+    color #fff
     height 100%
     float right
     text-align center
@@ -47,7 +48,7 @@ export default {
   .header-left
    float left
    font-size .48rem
-   color #666
+   color #fff
    .header-icon-left
     position relative
     display inline-block

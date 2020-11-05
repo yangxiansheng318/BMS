@@ -2,13 +2,22 @@
   <div class="container">
     <el-container  style="height: 100%; border: 1px solid #eee">
       <el-aside style="width:240px;">
-        <el-menu :default-openeds="['1', '1-1']">
-          <el-submenu :index="item.id" v-for="item of dataList" :key="item.id">
-            <template slot="title"><i class="el-icon-user"></i>{{item.title}}</template>
-            <el-menu-item-group v-show="item.childer">
-              <el-menu-item :index="cofirmIndex(item.id, childerItem.id)" v-for="childerItem of item.childer" :key="childerItem.id">{{ childerItem.title }}</el-menu-item>
-            </el-menu-item-group>
-          </el-submenu>
+        <el-menu default-active="1">
+          <div v-for="item of dataList" :key="item.id">
+            <el-menu-item :index="item.id" v-if="!item.childer">
+              <i class="el-icon-user"></i>
+              <span slot="title">{{item.title}}</span>
+            </el-menu-item>
+            <el-submenu :index="item.id" v-else>
+              <template slot="title"><i class="el-icon-user"></i>{{item.title}}</template>
+              <el-menu-item-group>
+                <el-menu-item :index="cofirmIndex(item.id, childerItem.id)" v-for="childerItem of item.childer" :key="childerItem.id">
+                  <i class="el-icon-user"></i>
+                  <span slot="title">{{ childerItem.title }}</span>
+                </el-menu-item>
+              </el-menu-item-group>
+            </el-submenu>
+          </div>
         </el-menu>
       </el-aside>
     </el-container>
@@ -23,6 +32,10 @@ export default {
       dataList: [
         {
           id: '1',
+          title: '个人中心'
+        },
+        {
+          id: '2',
           title: '用户管理',
           childer: [
             {
@@ -36,7 +49,7 @@ export default {
           ]
         },
         {
-          id: '2',
+          id: '3',
           title: '订单管理',
           childer: [
             {
@@ -50,7 +63,7 @@ export default {
           ]
         },
         {
-          id: '3',
+          id: '4',
           title: '业务管理',
           childer: [
             {
@@ -64,7 +77,7 @@ export default {
           ]
         },
         {
-          id: '4',
+          id: '5',
           title: '其它管理'
         }
       ]
